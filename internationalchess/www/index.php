@@ -15,7 +15,7 @@ $URI = explode('/', $_SERVER['REQUEST_URI']);
 if ($URI[0] === '') {
   array_shift($URI);
 }
-if ($URI[0] === 'chessboardjs.com') {
+if ($URI[0] === 'game.cugbmao.com') {
   array_shift($URI);
 }
 
