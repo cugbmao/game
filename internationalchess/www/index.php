@@ -18,7 +18,7 @@ if ($URI[0] === '') {
 if ($URI[0] === 'game.cugbmao.com') {
   array_shift($URI);
 }
-var_dump($URI);
+
 // chop off any GET parameters from the last entry in the array
 $URI[count($URI)-1] = preg_replace('/\?.+$/', '', $URI[count($URI)-1]);
 
