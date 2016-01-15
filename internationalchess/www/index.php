@@ -31,26 +31,26 @@ for ($i = 0; $i < 10; $i++) {
 }
 
 // homepage
-if ($URI[1] === '') {
+if ($URI[2] === '') {
   require(APP_PATH.'pages/home.php');
   die;
 }
 
 // docs
-if ($URI[1] === 'docs') {
+if ($URI[2] === 'docs') {
   require(APP_PATH.'pages/docs.php');
   die;
 }
 
 // examples
-if ($URI[1] === 'examples' && $URI[2] === '') {
+if ($URI[2] === 'examples' && $URI[3] === '') {
   require(APP_PATH.'pages/examples.php');
   die;
 }
 
 // single example
-if ($URI[1] === 'examples' && $URI[2] !== '') {
-  $example = ChessBoard::getExample($URI[2]);
+if ($URI[2] === 'examples' && $URI[3] !== '') {
+  $example = ChessBoard::getExample($URI[3]);
   if ($example !== false) {
     require(APP_PATH.'pages/single_example.php');
     die;
@@ -58,13 +58,13 @@ if ($URI[1] === 'examples' && $URI[2] !== '') {
 }
 
 // download
-if ($URI[1] === 'download') {
+if ($URI[2] === 'download') {
   require(APP_PATH.'pages/download.php');
   die;
 }
 
 // license
-if ($URI[1] === 'license') {
+if ($URI[2] === 'license') {
   // just redirect them to the GitHub page for now
   header('HTTP/1.1 307 Temporary Redirect');
   header('Location: https://github.com/oakmac/chessboardjs/blob/master/LICENSE.md');

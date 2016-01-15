@@ -2,7 +2,7 @@
 RewriteEngine On
 
 # Installation directory
-RewriteBase /chess/
+RewriteBase /internationalchess/www/
 
 # Protect hidden files from being viewed
 <Files .*>
